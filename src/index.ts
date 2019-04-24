@@ -196,25 +196,38 @@ new Vue({
   el: '#app',
   data: {
     hudDef: hudDef, //import
-    hudExport: hudDef.hud[selectedHudIndex]
-  }
+		hudExport: hudDef.hud[selectedHudIndex],
+		selectedHudIndex: selectedHudIndex
+	},
+	methods: {
+		hudSelected() {
+			// console.log(this.selectedHudIndex,selectedHudIndex);
+			var canvas = new fabric.Canvas('c');
+			drawHud(canvas,hudDef.hud[this.selectedHudIndex]);
+		}
+	},
+	mounted() {
+		var canvas = new fabric.Canvas('c');
+		drawHud(canvas,hudDef.hud[selectedHudIndex]);
+	}
+	
 })
 
 
 // create a wrapper around native canvas element (with id="c")
-var canvas = new fabric.Canvas('c');
 
-canvas.on('mouse:over', function(e:any) {
-		if (e!==undefined && e.target) {
-			e.target.set('fill', 'red');
-		}
-    canvas.renderAll();
-  });
+
+// canvas.on('mouse:over', function(e:any) {
+// 		if (e!==undefined && e.target) {
+// 			e.target.set('fill', 'red');
+// 		}
+//     canvas.renderAll();
+//   });
 
 // backgound image: https://stackoverflow.com/questions/47010467/fit-the-background-image-to-canvas-size-with-fabric-js/47074188
 // fullscreen https://stackoverflow.com/questions/19937397/show-canvas-in-fullscreen-in-fabric-js
 
-function drawHud(hud:Hud) {
+function drawHud(canvas:fabric.Canvas, hud:Hud) {
 	hud.elements.forEach( function (element) {
 		var obj: fabric.Object; 
 	    if (element.width<=0 || element.height<=0) {
@@ -259,4 +272,4 @@ function drawHud(hud:Hud) {
 
 
 
-drawHud(hudDef.hud[2]);
+//drawHud(hudDef.hud[0]);

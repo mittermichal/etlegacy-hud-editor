@@ -3,7 +3,7 @@
         "outDir": "./built/",
         "allowJs": true,
         "sourceMap": true,
-        "strict": true,
+        // "strict": true,
         // "noImplicitAny": false,
         "module": "none",
         // "noImplicitReturns": true,
