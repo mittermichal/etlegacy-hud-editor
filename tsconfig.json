@@ -4,7 +4,9 @@
         "allowJs": true,
         "sourceMap": true,
         "strict": true,
-        "noImplicitReturns": true,
+        // "noImplicitAny": false,
+        "module": "none",
+        // "noImplicitReturns": true,
         "moduleResolution": "node",
         "target": "es6"
     },
