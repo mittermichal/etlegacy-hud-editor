@@ -1,0 +1,12 @@
+{
+  "name": "etlegacy-hud-editor",
+  "version": "1.0.0",
+  "description": "tool to edit HUD for W:ET legacy mod",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michal Mitter",
+  "devDependencies": {
+  },
+  "dependencies": {}
+}
