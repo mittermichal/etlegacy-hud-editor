@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "outDir": "./built/",
+        "allowJs": true,
+        "sourceMap": true,
+        "strict": true,
+        "noImplicitReturns": true,
+        "moduleResolution": "node",
+        "target": "es6"
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}
